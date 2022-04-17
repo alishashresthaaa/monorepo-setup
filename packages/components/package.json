@@ -12,7 +12,7 @@
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier '**/*.{js,ts,tsx}' --write",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist ",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
