@@ -1,8 +1,6 @@
-# YoAppRepository
-
 ## Getting Started
 
-Yoapp Monorepo
+Monorepo
 
 ## Uses libraries
 
