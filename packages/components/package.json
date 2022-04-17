@@ -9,11 +9,16 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier '**/*.{js,ts,tsx}' --write",
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

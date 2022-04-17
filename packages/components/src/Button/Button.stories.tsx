@@ -1,23 +1,35 @@
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import custom_theme from "../styles/theme";
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import YoButton from "./Button";
+import Docs from "./Button.mdx";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: "ReactComponentLibrary/Button",
-    component: Button,
-} as ComponentMeta<typeof Button>;
+    title: "Input/Button",
+    component: YoButton,
+    parameters: {
+        layout: "centered",
+        docs: {
+            page: Docs,
+        },
+    },
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+} as ComponentMeta<typeof YoButton>;
 
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-    label: "Hello world!",
-};
+const Template: ComponentStory<typeof YoButton> = (args) => (
+    <ThemeProvider theme={custom_theme}>
+        <CssBaseline />
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-    label: "Click me!",
+        <YoButton {...args} />
+
+    </ThemeProvider>
+
+);
+
+export const Primary = Template.bind({});
+Primary.args = {
+    name: "Button",
+    size: "lg"
 };
