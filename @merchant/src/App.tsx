@@ -5,7 +5,8 @@ import { Button } from "@yoapp/components"
 function App() {
   return (
     <div className="App">
-      <Button label="Hello" />
+      Merchant
+      <Button name='Submit' size='sm' type='button' />
     </div>
   );
 }

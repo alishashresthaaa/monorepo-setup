@@ -10,7 +10,10 @@
   "scripts": {
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier '**/*.{js,ts,tsx}' --write"
+    "format": "prettier '**/*.{js,ts,tsx}' --write",
+    "prebuild": "rm -rf dist",
+    "build": "lerna exec -- yarn run build",
+    "test": "lerna exec -- yarn run test"
   },
   "workspaces": [
     "packages/*",
