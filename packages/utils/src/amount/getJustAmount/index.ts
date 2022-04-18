@@ -4,15 +4,16 @@
  * @returns
  */
 export const getJustAmount = (amount: string) => {
-  let amt: any;
+  let amt: any
   if (amount) {
-    if (amount?.includes("Rs.")) {
-      amt = amount.replace("Rs.", "").trim();
-    } else if (amount?.includes("NPR")) {
-      amt = amount.replace("NPR", "").trim();
+    if (amount?.includes('Rs.')) {
+      amt = amount.replace('Rs.', '').trim()
+    } else if (amount?.includes('NPR')) {
+      amt = amount.replace('NPR', '').trim()
     } else {
-      amt = amount;
+      amt = amount
     }
   }
-  return amt;
-};
+  return amt
+}
+

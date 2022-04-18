@@ -18,4 +18,6 @@ declare const dateWithDash: (date: any) => string;
 
 declare const dateWithSlash: (obj: string) => string;
 
-export { dateWithDash, dateWithSlash, getJustAmount, getPayableAmount, getToPayAmount };
+declare const getAmountOnly: (amount: string) => void;
+
+export { dateWithDash, dateWithSlash, getAmountOnly, getJustAmount, getPayableAmount, getToPayAmount };
